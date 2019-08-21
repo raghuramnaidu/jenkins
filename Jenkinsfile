@@ -9,12 +9,12 @@ pipeline {
 		}
 		stage('Build') {
 	    	steps {
-				 'mvn install -DskipTests'
+				 mvn install -DskipTests
 			}
 	    }
 		stage('Unit Tests') {
 			steps {
-				 'mvn surefire:test'
+				 mvn surefire:test
 			}
 		}
 		stage('Deployment') {
